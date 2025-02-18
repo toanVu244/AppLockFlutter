@@ -10,13 +10,12 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
     }
 }
-
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+    google()
+    mavenCentral()
     }
-}
+ }
 
 rootProject.buildDir = '../build'
 subprojects {

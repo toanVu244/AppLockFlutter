@@ -27,9 +27,9 @@ class UnlockedAppScreen extends StatelessWidget {
         return false;
       },
       child: Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).canvasColor,
         appBar: AppBar(
-          backgroundColor: Theme.of(context).backgroundColor,
+          backgroundColor: Theme.of(context).canvasColor,
           leading: Padding(
             padding: const EdgeInsets.all(6.0),
             child: Container(
@@ -72,9 +72,7 @@ class UnlockedAppScreen extends StatelessWidget {
           centerTitle: true,
           title: Text(
             "AppLock",
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                  color: Colors.white,
-                ),
+            style: Theme.of(context).textTheme.bodySmall,
           ),
           actions: [
             Padding(
@@ -250,18 +248,13 @@ class UnlockedAppScreen extends StatelessWidget {
                                         app.appName,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
-                                            .copyWith(color: Colors.white),
+.bodyLarge,
                                       ),
                                       Text(
                                         "${app.versionName}",
                                         style: Theme.of(context)
                                             .textTheme
-                                            .subtitle1!
-                                            .copyWith(
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                            ),
+.titleMedium,
                                       ),
                                     ],
                                   ),

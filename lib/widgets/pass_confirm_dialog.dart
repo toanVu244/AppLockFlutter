@@ -8,7 +8,7 @@ import '../services/constant.dart';
 
 Future showComfirmPasswordDialog(context) async {
   return await showGeneralDialog(
-    barrierColor: Colors.black.withOpacity(0.8),
+    barrierColor: Colors.black.withAlpha(25),
     context: context,
     barrierDismissible: false,
     barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
@@ -68,8 +68,7 @@ class PasswordCorfirmDialog extends StatelessWidget {
                             autofocus: true,
                             style: Theme.of(context)
                                 .textTheme
-                                .subtitle1!
-                                .copyWith(color: Colors.white),
+                               .titleSmall,
                             onChanged: (value) {
                               Fluttertoast.cancel();
                               if (value.length == 6 &&
@@ -94,8 +93,7 @@ class PasswordCorfirmDialog extends StatelessWidget {
                               hintText: 'Enter Passcode...',
                               labelStyle: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
-                                  .copyWith(color: Colors.white),
+                                  .titleSmall,
                               isCollapsed: true,
                               filled: true,
                               fillColor: Colors.transparent,
